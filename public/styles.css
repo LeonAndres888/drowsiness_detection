@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 5%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar {
+  position: fixed; /* Fixed position to the left */
+  top: 50%; /* Center vertically */
+  left: 5px;
+  transform: translateY(-50%); /* Adjust for exact centering */
+  background: rgba(255, 255, 255, 0.274); /* Subtle transparency */
+  padding: 10px;
+  border-radius: 25px; /* Smooth edges on the right */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Align items in the center */
+  z-index: 2000; /* Ensure it's above other elements */
+}
+
+.navbar a {
+  font-size: 25px; /* Adjust font size */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px; /* Padding for each item */
+  margin: 10px 0; /* Margin between items */
+  border-radius: 5px; /* Rounded corners for each item */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.5); /* Hover background */
+  color: #444; /* Change text color on hover */
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.bkg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bkg.active img {
+  opacity: 1;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.title h1 {
+  font-size: 130px;
+  color: #fff;
+  text-shadow: 5px 5px #9c9797b9;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+
+
+}
+
+.modal-content {
+  background-color: #c4a484; /* Light background for the modal */
+  border-radius: 8px;
+  padding: 20px;
+  width: 350px; /* Slightly wider */
+  height: auto; /* Adjust height automatically */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+}
+
+/* Timer Input and Display Styling */
+#pomodoro-timer input {
+  width: 60px; /* Wider inputs */
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+#pomodoro-timer > span {
+  font-size: 28px;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* Button Styling */
+button {
+  background-color: #4d362c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.close {
+  color: #444;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* Add this to your styles.css */
+.spotify-playlist {
+  max-width: 400px; /* Set the max width of the playlist */
+  margin: 0 auto; /* Center the playlist on the page */
+}
+
+/* Close button for Spotify modal */
+.closeSpotify {
+  color: #444;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+div#draggableSpotify {
+  height: 195px;
+  width: 450px;
+  background-color: #c4a4849a;
+}
+#stickyNotesContainer {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 2000; /* Ensure it appears above other content */
+}
+
+.sticky-note {
+  background-color: #ffeb3b;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin: 10px;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.sticky-note textarea {
+  width: 100%;
+  height: 90%;
+  border: none;
+  background: transparent;
+  resize: none;
+}
+.sticky-note-header {
+  background-color: #ddd; /* Different background to indicate draggable area */
+  padding: 5px;
+  cursor: move; /* Cursor indicates this part is draggable */
+  border-top-left-radius: 5px; /* Rounded corners */
+  border-top-right-radius: 5px;
+}
+/* Link Input Modal Styles */
+#linkModal .modal-content {
+  width: 400px; /* Adjust width as needed */
+}
+
+#linkInput {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#iframeContainer {
+  margin-top: 10px;
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+/* ChatGPT Modal styles */
+#chatGPTModal .modal-content {
+  width: 400px; /* Adjust width as needed */
+  height: auto; /* Adjust height automatically */
+}
+
+#chatOutput {
+  height: 300px; /* Adjust height as needed */
+  border: 1px solid #ddd;
+  padding: 10px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+#chatInput {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.closeChatGPT {
+  color: #444;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+video#webcam {
+  border-radius: 8px; /* Optional: rounds the corners of the video feed */
+  border: 2px solid #fff; /* Optional: adds a border around the video feed */
+  position: absolute; 
+  right: 10px; 
+  top: 10px; 
+  width: 200px;
+}
